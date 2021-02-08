@@ -1,2 +1,2 @@
 # Game-of-Life-SOA-MONS
-Laititia Monserrat David Soares Caetano
+Laetitia Monserrat David Soares Caetano
