@@ -10,6 +10,7 @@ jobs:
           password: $password  # context / project UI env-var reference
     steps:
       - checkout
+      - run: npm install
       - run:
             name: its time to build
             command: npm run build
