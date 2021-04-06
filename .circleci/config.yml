@@ -4,7 +4,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/<language>:<version TAG>
+      - image: circleci/node:14
         auth:
           username: $userdocker
           password: $password  # context / project UI env-var reference
@@ -15,10 +15,10 @@ jobs:
             command: npm build
       - run:
             name: react-scripts build
-            command: "react-scripts build"
+            command: react-scripts build
   test:
     docker:
-      - image: circleci/<language>:<version TAG>
+      - image: circleci/node:14
         auth:
           username: $userdocker
           password: $password  # context / project UI env-var reference
