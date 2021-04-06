@@ -1,0 +1,47 @@
+body {
+    background: darkgray; 
+}
+    
+.box {
+    display: inline-block;       
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    margin-left: -1px;
+    margin-bottom: -1px;
+}
+
+.box:hover { 
+    background: darkslategrey;
+}
+  
+.off {
+    background-color: lightgray;
+}
+  
+.on {
+    background-color: lightseagreen;
+}
+  
+.grid {
+    width: 150px;
+    line-height: 0;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.buttons img {
+    width: 60px;
+    margin: 0 1%;
+    cursor: pointer;
+}
+    
+h1, h2, h3, h4 {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
