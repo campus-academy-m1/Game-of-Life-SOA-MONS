@@ -16,9 +16,6 @@ jobs:
       - run:
             name: react-scripts build
             command: "react-scripts build"
-      - run:
-            - chekout
-            - run: echo "it's time to build"
   test:
     docker:
       - image: circleci/<language>:<version TAG>
