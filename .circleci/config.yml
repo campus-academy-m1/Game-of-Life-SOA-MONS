@@ -11,11 +11,8 @@ jobs:
     steps:
       - checkout
       - run:
-            name: npm build
-            command: npm build
-      - run:
-            name: react-scripts build
-            command: react-scripts build
+            name: its time to build
+            command: npm run build
   test:
     docker:
       - image: circleci/node:14
@@ -24,11 +21,17 @@ jobs:
           password: $password  # context / project UI env-var reference
     steps:
       - checkout
-      - run: echo "this is the test job"
+      - run: npm install
+      - run: 
+          name: its time to test
+          command: npm run test
 
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
     jobs:
-      - build
       - test
+      - build:
+          requires:
+            - test
+      
